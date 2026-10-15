@@ -7,12 +7,12 @@ function NavBar() {
         <header>
             <Navbar>
                 <Container>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div>
+                        <nav>
                             <li>
-                                <Nav.Link class="navLink" href="#">Random generator </Nav.Link>
-                                <a class="navLink" href="#">Create </a>
-                                <a class="navLink" href="#">List </a>
+                                <Nav.Link>Random generator </Nav.Link>
+                                <a>Create </a>
+                                <a>List </a>
                             </li>
                         </nav>
                     </div>
