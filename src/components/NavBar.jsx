@@ -1,24 +1,29 @@
 import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom'
 
 
 function NavBar() {
 
     return (
-        <header>
+        
             <Navbar>
-                <Container>
-                    <div>
-                        <nav>
+                    <nav>
+                        <ul>
                             <li>
-                                <Nav.Link>Random generator </Nav.Link>
-                                <Nav.Link>Create </Nav.Link>
-                                <Nav.Link>List </Nav.Link>
+                                <Link to="/">Random generator </Link>
                             </li>
-                        </nav>
-                    </div>
-                </Container>
+
+                            <li>
+                                <Link to="/create">Create </Link>
+                            </li>
+
+                            <li>
+                                <Link to="/list">List </Link>
+                            </li>
+                        </ul>
+                    </nav>
             </Navbar>
-        </header>
+        
     )
 }
 

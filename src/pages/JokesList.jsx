@@ -14,3 +14,5 @@ function JokesList() {
     )
 
 }
+
+export default JokesList
