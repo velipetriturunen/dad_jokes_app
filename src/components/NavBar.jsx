@@ -11,8 +11,8 @@ function NavBar() {
                         <nav>
                             <li>
                                 <Nav.Link>Random generator </Nav.Link>
-                                <a>Create </a>
-                                <a>List </a>
+                                <Nav.Link>Create </Nav.Link>
+                                <Nav.Link>List </Nav.Link>
                             </li>
                         </nav>
                     </div>
