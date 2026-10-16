@@ -18,7 +18,6 @@ function RandomJokes() {
         const data = await response.json();
 
         setJoke(data.joke);
-
     };
 
 
