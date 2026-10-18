@@ -8,10 +8,10 @@ import JokesList from './pages/JokesList.jsx'
 import { useState } from 'react'
 
 function App() {
+    
+    
 
-
-    const [page, setPage] = useState("")
-
+    
 
     return (
         <BrowserRouter>
