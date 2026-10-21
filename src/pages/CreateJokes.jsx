@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function CreateJokes({addJoke}) {
+function CreateJokes({onSaveJoke}) {
     const [joke, setJoke] = useState("");
     
     const handleSubmit = (e) => {
@@ -8,7 +8,7 @@ function CreateJokes({addJoke}) {
 
         if (!joke.trim()) return;
 
-        addJoke(joke);
+        onSaveJoke(joke)
         setJoke("");
     }
 

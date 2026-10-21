@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 
-function RandomJokes() {
+function RandomJokes({onSaveJoke}) {
 
     const [joke, setJoke] = useState("");
 
@@ -18,6 +18,7 @@ function RandomJokes() {
         const data = await response.json();
 
         setJoke(data.joke);
+        onSaveJoke(data.joke);
     };
 
 
@@ -26,7 +27,7 @@ function RandomJokes() {
             <h3>Random Jokes</h3>
             <p>{joke}</p>
             <button onClick={getJoke}>
-                Generoi
+                Generate
             </button>
         </div>
     )

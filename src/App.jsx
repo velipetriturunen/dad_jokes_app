@@ -8,9 +8,13 @@ import JokesList from './pages/JokesList.jsx'
 import { useState } from 'react'
 
 function App() {
-    
-    
+    const [jokesArray, setJokesArray] = useState([])
 
+    function addJoke(joke) {
+        setJokesArray((currentJokes) => [
+            ...currentJokes, joke
+        ])
+    }
     
 
     return (
@@ -21,9 +25,9 @@ function App() {
             </div>
 
             <Routes>
-                <Route path="/" element={<RandomJokes />} />
-                <Route path="/create" element={<CreateJokes />} />
-                <Route path="/list" element={<JokesList />} />
+                <Route path="/" element={<RandomJokes onSaveJoke={addJoke}/>} />
+                <Route path="/create" element={<CreateJokes onSaveJoke={addJoke}/>} />
+                <Route path="/list" element={<JokesList jokes={jokesArray}/>} />
             </Routes>
         </BrowserRouter>
     )

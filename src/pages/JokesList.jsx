@@ -1,7 +1,8 @@
 
-function JokesList() {
 
+function JokesList({jokes}) {
 
+    
 
 
 
@@ -11,10 +12,11 @@ function JokesList() {
 
             <div>
                 <ol>
-                    <li>
-                        <p>List of jokes is going to show here!</p>
-                    </li>
-                    
+                    {jokes.map((joke, index) => (
+                    <li key={index}>
+                        <p>{joke}</p>
+                        </li>
+                    ))}
                 </ol>
             </div>
             
