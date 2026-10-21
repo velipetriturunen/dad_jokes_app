@@ -11,13 +11,19 @@ import { ToastContainer, toast} from 'react-toastify'
 function App() {
     const [jokesArray, setJokesArray] = useState([])
 
+    //Add a joke to a list
     function addJoke(joke) {
         setJokesArray((currentJokes) => [
             ...currentJokes, joke
         ])
     }
+
+    //clear the list
+    function clearList() {
+        setJokesArray([]);
+    }
     
-    //Warnings
+    //Toast Warnings
     const toastWarning = (text) => {
         toast.warn(text, {
             position: "top-right",
@@ -31,6 +37,19 @@ function App() {
             });
     }
 
+    //Toast Errors
+    const toastError = (text) => {
+        toast.error(text, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+            });
+    }
 
 
 
@@ -43,8 +62,8 @@ function App() {
 
             <Routes>
                 <Route path="/" element={<RandomJokes onSaveJoke={addJoke} toastWarning={toastWarning}/>} />
-                <Route path="/create" element={<CreateJokes onSaveJoke={addJoke}/>} />
-                <Route path="/list" element={<JokesList jokes={jokesArray}/>} />
+                <Route path="/create" element={<CreateJokes onSaveJoke={addJoke} toastError={toastError}/>} />
+                <Route path="/list" element={<JokesList jokes={jokesArray} clearList={clearList} toastError={toastError}/>} />
             </Routes>
 
             <ToastContainer/>
