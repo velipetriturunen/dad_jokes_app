@@ -1,8 +1,15 @@
 import { useState } from 'react';
+import { ToastContainer, toast} from 'react-toastify'
 
 function CreateJokes({onSaveJoke}) {
     const [joke, setJoke] = useState("");
-    
+
+    //Error message
+    const errorNotification = () => {
+        toast
+    }
+
+    //Submit handling
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -18,7 +25,7 @@ function CreateJokes({onSaveJoke}) {
         <div>
             <h3>Create Jokes</h3>
             <form onSubmit={handleSubmit}>
-                <input type="text" value={joke} onChange={(e) => setJoke(e.target.value)} placeholder="Write a joke"></input>
+                <input id="input" type="text" value={joke} onChange={(e) => setJoke(e.target.value)} placeholder="Write a joke"></input>
 
                 <button type="submit">Add</button>
             </form>

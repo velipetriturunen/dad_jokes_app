@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 
-
-function RandomJokes({onSaveJoke}) {
+function RandomJokes({onSaveJoke, toastWarning}) {
 
     const [joke, setJoke] = useState("");
 
     const getJoke = async () => {
+        try {
         const response = await fetch(
             "https://icanhazdadjoke.com/",
             {
@@ -19,6 +19,10 @@ function RandomJokes({onSaveJoke}) {
 
         setJoke(data.joke);
         onSaveJoke(data.joke);
+    } catch(error) {
+        toastWarning("An Error Has Occured During API Fetch!")
+    }
+    
     };
 
 
