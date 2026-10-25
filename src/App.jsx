@@ -55,7 +55,7 @@ function App() {
 
     return (
         <BrowserRouter>
-            <div className="app">
+            <div className="header">
                 <Header />
                 <NavBar />
             </div>

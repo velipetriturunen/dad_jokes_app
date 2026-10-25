@@ -1,29 +1,30 @@
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 
 function NavBar() {
 
     return (
-        
-            <Navbar>
-                    <nav>
-                        <ul>
-                            <li>
-                                <Link to="/">Random generator </Link>
-                            </li>
+ <Navbar expand="md" bg="dark" data-bs-theme="dark">
+      <Container>
+        <Navbar.Collapse id="main-navbar">
+          <Nav className="ms-auto gap-3">
 
-                            <li>
-                                <Link to="/create">Create </Link>
-                            </li>
+            <Nav.Link as={NavLink} to="/" end>
+              Random generator
+            </Nav.Link>
 
-                            <li>
-                                <Link to="/list">List </Link>
-                            </li>
-                        </ul>
-                    </nav>
-            </Navbar>
-        
+            <Nav.Link as={NavLink} to="/create">
+              Create
+            </Nav.Link>
+
+            <Nav.Link as={NavLink} to="/list">
+              List
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
     )
 }
 
