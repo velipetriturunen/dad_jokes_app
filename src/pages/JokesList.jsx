@@ -1,8 +1,9 @@
 
 
 function JokesList({jokes, clearList, toastError}) {
-
+    //Mahdollistetaan csv tiedoston lataus
     const downloadCSV = () => {
+        //Jos tyhjä lista
         if(jokes.length === 0) {
             toastError("Cannot download an empty list!")
             return
@@ -26,8 +27,8 @@ function JokesList({jokes, clearList, toastError}) {
             <h3>Jokes List</h3>
 
             <div>
-                <button onClick={downloadCSV}>Download as CSV</button>
-                <button onClick={clearList}>Clear list</button>
+                <button className="buttons" onClick={downloadCSV}>Download as CSV</button>
+                <button className="buttons" onClick={clearList}>Clear list</button>
             </div>
 
             <div>

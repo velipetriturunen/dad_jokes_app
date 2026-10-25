@@ -19,7 +19,7 @@ function CreateJokes({onSaveJoke, toastError}) {
             <h3>Create Jokes</h3>
             <form onSubmit={handleSubmit}>
                 <input id="input" type="text" value={joke} onChange={(e) => setJoke(e.target.value)} placeholder="Write a joke"></input>
-                <button class="pageButton" type="submit">Add</button>
+                <button className="pageButton" type="submit">Add</button>
             </form>
         </div>
     )

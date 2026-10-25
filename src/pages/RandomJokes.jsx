@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 
 function RandomJokes({onSaveJoke, toastWarning}) {
-
     const [joke, setJoke] = useState("");
-
+    
+    //Toteutetaan API kutsu random vitsejä varten
     const getJoke = async () => {
         try {
         const response = await fetch(
@@ -14,17 +14,14 @@ function RandomJokes({onSaveJoke, toastWarning}) {
                 },
             }
         );
-
         const data = await response.json();
-
         setJoke(data.joke);
         onSaveJoke(data.joke);
     } catch(error) {
+        //Jos jokin virhe sattuu API kutsussa
         toastWarning("An Error Has Occured During API Fetch!")
     }
-    
     };
-
 
     return (
         <div>
