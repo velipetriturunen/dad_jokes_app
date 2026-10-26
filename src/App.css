@@ -183,8 +183,12 @@
   }
 }
 
-.header {
-  background-color: darkred
+.top {
+  background-color: darkred;
   
       
+}
+
+.pageText {
+  color: white;
 }

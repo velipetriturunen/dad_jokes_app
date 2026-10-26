@@ -24,7 +24,7 @@ function JokesList({jokes, clearList, toastError}) {
 
     return(
         <div>
-            <h3>Jokes List</h3>
+            <h3 className="pageText">Jokes List</h3>
 
             <div>
                 <button className="buttons" onClick={downloadCSV}>Download as CSV</button>
@@ -32,10 +32,10 @@ function JokesList({jokes, clearList, toastError}) {
             </div>
 
             <div>
-                <ol>
+                <ol className="pageText">
                     {jokes.map((joke, index) => (
                     <li key={index}>
-                        <p>{joke}</p>
+                        <p className="pageText">{joke}</p>
                         </li>
                     ))}
                 </ol>

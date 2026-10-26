@@ -1,3 +1,4 @@
+import './NavBar.css'
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom'
 
@@ -6,9 +7,13 @@ function NavBar() {
 
     return (
  <Navbar expand="md" bg="dark" data-bs-theme="dark">
-      <Container>
+      <Container >
+        <Navbar.Toggle aria-controls="main-navbar" />
+        
         <Navbar.Collapse id="main-navbar">
           <Nav className="ms-auto gap-3">
+
+
 
             <Nav.Link as={NavLink} to="/" end>
               Random generator

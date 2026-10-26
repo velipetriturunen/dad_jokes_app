@@ -25,8 +25,8 @@ function RandomJokes({onSaveJoke, toastWarning}) {
 
     return (
         <div>
-            <h3>Random Jokes</h3>
-            <p>{joke}</p>
+            <h3 className="pageText">Random Jokes</h3>
+            <p className="pageText">{joke}</p>
             <button onClick={getJoke}>
                 Generate
             </button>

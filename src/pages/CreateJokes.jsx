@@ -16,7 +16,7 @@ function CreateJokes({onSaveJoke, toastError}) {
 
     return (
         <div>
-            <h3>Create Jokes</h3>
+            <h3 className="pageText">Create Jokes</h3>
             <form onSubmit={handleSubmit}>
                 <input id="input" type="text" value={joke} onChange={(e) => setJoke(e.target.value)} placeholder="Write a joke"></input>
                 <button className="pageButton" type="submit">Add</button>
